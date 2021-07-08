@@ -53,7 +53,7 @@
     width: 50%;
     background: linear-gradient(purple, purple), url('images/image-header-desktop.jpg');
     background-size: cover;
-    background-repeat:none;
+    background-repeat:no-repeat;
     background-blend-mode: multiply;
     filter:saturate(200%)
 }
