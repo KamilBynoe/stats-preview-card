@@ -1,0 +1,131 @@
+:root{
+    box-sizing: border-box;
+    --blue-color: hsl(233, 47%, 7%);
+    --desat-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+
+    --white:hsl(0, 0%, 100%);
+    --transparent-white-one:hsla(0, 0%, 100%, 0.75);
+    --transparent-white-two: hsla(0, 0%, 100%, 0.6);
+    --font-lex: Lexend Deca;
+    --font-Inter: Inter;
+    background-color: var(--blue-color);
+
+    font-size: 15px;
+
+}
+
+.container{
+    display:flex;
+    height:340px;
+    width:61%;
+    margin: 200px auto;
+}
+
+.cardDimensions{
+    height: 300px;
+    width: 50%;
+}
+.card{
+    background-color:var(--desat-blue);
+    border-radius: 10px 0 0 10px;
+    padding: 30px 60px 10px 20px;
+}
+.purpText{
+    color:var(--soft-violet)
+}
+.titleText{
+    font-size: 24px;
+    color: var(--white);
+    font-family:Inter;
+    font-weight: 700;
+}
+
+.statRow{
+    display:flex;
+    flex-direction:row;
+}
+
+.img-card{
+    position:relative;
+    border-radius: 0 10px 10px 0;
+    height: inherit;
+    width: 50%;
+    background: linear-gradient(purple, purple), url('images/image-header-desktop.jpg');
+    background-size: cover;
+    background-repeat:none;
+    background-blend-mode: multiply;
+    filter:saturate(200%)
+}
+
+.img{
+    height:340px;
+    background: url("/images/image-header-desktop.jpg"), linear-gradient(var(--soft-violet), var(--soft-violet))
+}
+
+
+
+p{
+    color:var(--transparent-white-one);
+    font-family:Lexend Deca;
+    font-weight:400;
+    font-size: 12px;
+    line-height: 2em;
+}
+.stat{
+    color:var(--white);
+    font-family: var(--font-Inter);
+    font-size:20px;
+    font-weight:700;
+}
+.statText{
+    text-transform: uppercase;
+    color: var(--transparent-white-two);
+    margin-right: 30px;
+    font-family: var(--font-lex);
+    font-size:12px;
+}
+
+@media only screen and (max-width: 675px){
+
+    .container{
+        flex-direction:column-reverse;
+        height: 800px;
+    }
+
+    .statRow{
+        flex-direction: column;
+        margin: auto;
+        padding-left: 90px;
+    }
+
+    .img-card{
+        border-radius: 10px 10px 0 0;
+        width: calc(80% + 80px);
+        height: 40%;
+    }
+    .card{
+        border-radius: 0 0 10px 10px;
+    }
+
+    .cardDimensions{
+        width: 80%;
+        height: 60%;
+    }
+
+    p{
+        margin: 50px 0;
+        text-align: center;
+    }
+
+    .titleText{
+        text-align:center;
+    }
+
+    .statText{
+        margin-bottom: 30px
+    }
+
+
+
+}
